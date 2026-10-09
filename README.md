@@ -1,12 +1,12 @@
 # ValStealth (LolChat Blocker)
 
-Tiny native Windows tray app (~1-2 MB RAM). While running, it blocks outbound TCP port 5223 with a firewall rule named `lolchat`. Exiting removes the rule. No window, no console, only a tray icon.
+Tiny Windows tray app. While running, it blocks outbound TCP port 5223 with a firewall rule named `lolchat`. Exiting removes the rule.
 
 ## Files (keep in one folder)
 
 - `lolchat.c` - source
 - `lolchat.rc` - embeds the icon
-- `icon.ico` - your icon (must have this exact name; use a multi-size .ico: 16, 32, 48, 256)
+- `icon.ico` - icon (must have this exact name; use a multi-size .ico: 16, 32, 48, 256)
 
 ## Build
 
@@ -18,12 +18,6 @@ Tiny native Windows tray app (~1-2 MB RAM). While running, it blocks outbound TC
 cd C:\path\to\folder
 rc lolchat.rc
 cl /O1 /GS- /W3 lolchat.c lolchat.res /Fe:ValStealth.exe /link /SUBSYSTEM:WINDOWS /ENTRY:wWinMainCRTStartup user32.lib shell32.lib advapi32.lib
-```
-
-No icon yet? Skip `rc` and the `.res` file:
-
-```
-cl /O1 /GS- /W3 lolchat.c /Fe:ValStealth.exe /link /SUBSYSTEM:WINDOWS /ENTRY:wWinMainCRTStartup user32.lib shell32.lib advapi32.lib
 ```
 
 Output: `ValStealth.exe` (you can delete the `.obj` and `.res` files).
