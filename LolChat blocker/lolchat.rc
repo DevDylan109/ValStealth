@@ -1,0 +1,3 @@
+// ID 1 is the lowest icon ID, so Windows uses it as the .exe icon in Explorer.
+// The same resource is loaded by lolchat.c for the tray icon.
+1 ICON "icon.ico"
