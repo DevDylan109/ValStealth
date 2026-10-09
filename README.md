@@ -1,6 +1,6 @@
 # ValStealth
 
-Tiny Windows tray app that hides your account status while playing valorant. While running, it blocks outbound TCP port 5223 with a firewall rule named `lolchat`. Exiting removes the rule.
+Tiny Windows tray app that hides your account status while playing valorant. While running, it blocks outbound TCP port 5223 (used for LoL chat) with a firewall rule named `lolchat`. Exiting removes the rule.
 
 ## Usage
 You have to run it as admin, once it's started you can find it in your system tray.
